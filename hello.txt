@@ -1,7 +1,4 @@
 hello 3333
 hello 6666
-<<<<<<< HEAD
 hello master6
-=======
 hello hot-fix6
->>>>>>> hot-fix
