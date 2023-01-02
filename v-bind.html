@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    img{
+      width: 200px;
+      height: 200px;
+    }
+    .active{
+      color: red;
+    }
+  </style>
+  <div id="box">
+    <img v-bind:src="imgURL" alt="">
+    <a v-bind:href="aHref">点击跳转</a>
+    <p :class="{active:isactive,}">{{message}}</p>
+    <p :class="[name,age]"></p>
+    <button @click="change">pick me!</button>
+  </div>
+<script src="vue.js"></script>
+<script>
+  let str = new Vue({
+    el:"#box",
+    data:{
+        message:"文本内容",
+        imgURL:"3.jpg",
+        aHref:"file:///C:/Users/lenovo/Desktop/vue%E5%9F%BA%E7%A1%80/day2.html",
+        isactive:"true",
+        name:"123",
+        age:"18"
+        },
+      methods:{
+        change:function(){
+          this.isactive = !this.isactive
+        }
+      }
+    })
+</script>
+</body>
+</html>
